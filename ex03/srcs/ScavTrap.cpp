@@ -1,8 +1,19 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
+ScavTrap::ScavTrap()
 {
-	std::cout << "🦾 " << name << " upgraded to powerfull ScavTrap." << std::endl;
+	std::cout << "🦾 " << " Default ScavTrap." << std::endl;
+	this->_attack_dmg = 30;
+	this->_life_points = 100;
+	this->_energy_points = 100;
+}
+
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+{
+	std::cout << "ici🦾 " << name << " upgraded to powerfull ScavTrap." << std::endl;
+	this->_life_points = 100;
+	this->_energy_points = 50;
+	this->_attack_dmg = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &to_cpy) : ClapTrap(to_cpy)

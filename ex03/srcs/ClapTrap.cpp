@@ -1,5 +1,14 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+	this->_life_points = 10;
+	this->_energy_points = 10;
+	this->_attack_dmg = 0;
+
+	std::cout << "🤖 Default ClapTrap created ! ❤️  10 life points and 🔋 10 energy points." << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name) : _name(name)
 {
 	this->_life_points = 10;
@@ -7,16 +16,6 @@ ClapTrap::ClapTrap(std::string name) : _name(name)
 	this->_attack_dmg = 0;
 
 	std::cout << "🤖 ClapTrap " << name << " created ! ❤️  10 life points and 🔋 10 energy points." << std::endl;
-}
-
-ClapTrap::ClapTrap(std::string name, int life_points, int energy_points, int attack_dmg) : _name(name)
-{
-	this->_life_points = life_points;
-	this->_energy_points = energy_points;
-	this->_attack_dmg = attack_dmg;
-
-	std::cout << "🤖 ClapTrap " << name << " created ! ❤️  " << life_points << 
-	" life points and 🔋 " << energy_points << " energy points." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &to_cpy)

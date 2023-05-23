@@ -1,16 +1,9 @@
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-	FragTrap nbr1("Romeo");
-	FragTrap nbr2("Pierre");
-	FragTrap nbr3(nbr2);
-	std::cout << "-------------------------------------------------------------------------" 
-	<< std::endl;
-	nbr3.attack("Pierre");
-	nbr3.highFivesGuys();
-	nbr3.takeDamage(100);
-	nbr3.highFivesGuys();
-	std::cout << "-------------------------------------------------------------------------" 
-	<< std::endl;
+	DiamondTrap nbr1("Romeo");
+	nbr1.attack("Pierre");
+	std::cout << "-------------------------------------------------------------------------" << std::endl;
+	std::cout << "-------------------------------------------------------------------------" << std::endl;
 }

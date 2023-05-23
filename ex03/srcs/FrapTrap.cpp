@@ -1,8 +1,19 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
+FragTrap::FragTrap()
 {
-	std::cout << "🦾 " << name << " upgraded to even more powerfull FragTrap." << std::endl;
+	std::cout << "🦾 " << " Default FragTrap." << std::endl;
+	this->_attack_dmg = 30;
+	this->_life_points = 100;
+	this->_energy_points = 100;
+}
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
+{
+	std::cout << "ici🦾 " << name << " upgraded to even more powerfull FragTrap." << std::endl;
+	this->_attack_dmg = 30;
+	this->_life_points = 100;
+	this->_energy_points = 100;
 }
 
 FragTrap::FragTrap(const FragTrap &to_cpy) : ClapTrap(to_cpy)

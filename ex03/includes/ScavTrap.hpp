@@ -3,9 +3,10 @@
 #ifndef SCAV_TRAP_H
 # define SCAV_TRAP_H
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	public:
+		ScavTrap();
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &to_cpy);
 		~ScavTrap();

@@ -11,8 +11,8 @@ class ClapTrap
 		int _energy_points;
 		int _attack_dmg;
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(std::string name, int life_points, int energy_points, int attack_dmg);
 		ClapTrap(const ClapTrap &to_cpy);
 		~ClapTrap();
 		ClapTrap &operator=(const ClapTrap &obj);
